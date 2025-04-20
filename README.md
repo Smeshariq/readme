@@ -27,7 +27,7 @@
 
 ## Примененные концепции
 
-### Domain-Driven Design (DDD)
+### Domain-Driven Design
 - **Доменная модель**: Логика инкапсулирована в классах `Animal`, `Enclosure`, `FeedingSchedule` (Domain).
 - **Value Objects**: Использованы перечисления `Gender`, `HealthStatus` (Domain).
 - **Доменные события**: Реализован `AnimalMovedEvent` в `Animal.cs`.
