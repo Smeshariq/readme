@@ -1,34 +1,34 @@
-# Отчет по проекту "Система управления зоопарком"
+# Отчет по мини-дз 2
 
 ## Реализованный функционал
 1. **Добавление/удаление животного**  
-   - Класс: `AnimalsController` (Presentation/Controllers/AnimalsController.cs)  
-   - Методы: `AddAnimal` (POST /api/animals), `DeleteAnimal` (DELETE /api/animals/{id})
+   - Класс: `AnimalsController` 
+   - Методы: `AddAnimal`, `DeleteAnimal`
 
 2. **Добавление/удаление вольера**  
-   - Класс: `EnclosuresController` (Presentation/Controllers/EnclosuresController.cs)  
-   - Методы: `AddEnclosure` (POST /api/enclosures), `DeleteEnclosure` (DELETE /api/enclosures/{id})
+   - Класс: `EnclosuresController` 
+   - Методы: `AddEnclosure`, `DeleteEnclosure`
 
 3. **Перемещение животного между вольерами**  
-   - Класс: `AnimalTransferService` (Application/AnimalTransferService.cs)  
-   - Контроллер: `AnimalsController` (метод `TransferAnimal`, POST /api/animals/{id}/transfer)
+   - Класс: `AnimalTransferService` 
+   - Контроллер: `AnimalsController`
 
 4. **Просмотр расписания кормления**  
-   - Класс: `FeedingSchedulesController` (Presentation/Controllers/FeedingSchedulesController.cs)  
-   - Метод: `GetSchedule` (GET /api/feedingschedules/{id})
+   - Класс: `FeedingSchedulesController`
+   - Метод: `GetSchedule`
 
 5. **Добавление нового кормления**  
-   - Класс: `FeedingOrganizationService` (Application/FeedingOrganizationService.cs)  
-   - Контроллер: `FeedingSchedulesController` (метод `AddSchedule`, POST /api/feedingschedules)
+   - Класс: `FeedingOrganizationService`
+   - Контроллер: `FeedingSchedulesController`
 
 6. **Статистика зоопарка**  
-   - Класс: `ZooStatisticsService` (Application/ZooStatisticsService.cs)  
+   - Класс: `ZooStatisticsService`
    - Методы: `GetTotalAnimals`, `GetFreeEnclosures`
 
 ## Примененные концепции
 
 ### Domain-Driven Design (DDD)
-- **Богатая доменная модель**: Логика инкапсулирована в классах `Animal`, `Enclosure`, `FeedingSchedule` (Domain).
+- **Доменная модель**: Логика инкапсулирована в классах `Animal`, `Enclosure`, `FeedingSchedule` (Domain).
 - **Value Objects**: Использованы перечисления `Gender`, `HealthStatus` (Domain).
 - **Доменные события**: Реализован `AnimalMovedEvent` в `Animal.cs`.
 
